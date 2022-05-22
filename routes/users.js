@@ -20,4 +20,20 @@ router.put('/:id', async (req, res) => {
   }
 });
 
+// Delete user information
+router.delete('/:id', async (req, res) => {
+  if (req.body.userId === req.params.id || req.body.isAdmin) {
+    try {
+      const user = await User.findByIdAndDelete(req.params.id);
+      res.status(200).json('Deleted the information of your account');
+    } catch (err) {
+      return res.status(500).json(err);
+    }
+  } else {
+    return res
+      .status(403)
+      .json('You cannot delete the information of this account');
+  }
+});
+
 module.exports = router;
