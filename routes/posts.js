@@ -20,9 +20,24 @@ router.put('/:id', async (req, res) => {
       await post.updateOne({
         $set: req.body,
       });
-      return res.status(200).json('Updated succeeded');
+      return res.status(200).json('Update succeeded');
     } else {
       return res.status(403).json("You cannot edit other person's post");
+    }
+  } catch (err) {
+    return res.status(403).json(err);
+  }
+});
+
+// delete a post
+router.delete('/:id', async (req, res) => {
+  try {
+    const post = await Post.findById(req.params.id);
+    if (post.userId === req.body.userId) {
+      await post.deleteOne();
+      return res.status(200).json('Delete succeeded');
+    } else {
+      return res.status(403).json("You cannot delete other person's post");
     }
   } catch (err) {
     return res.status(403).json(err);
