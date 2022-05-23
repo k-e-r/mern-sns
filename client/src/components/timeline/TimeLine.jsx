@@ -1,5 +1,12 @@
 import React from 'react';
+import './TimeLine.css';
 
 export default function TimeLine() {
-  return <div>TimeLine</div>;
+  return (
+    <div className='timeline'>
+      <div className='timelineWrapper'>
+        <Share />
+      </div>
+    </div>
+  );
 }
