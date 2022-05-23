@@ -42,7 +42,7 @@ router.get('/:id', async (req, res) => {
     const user = await User.findById(req.params.id);
     if (user) {
       const { password, updatedAt, ...other } = user._doc;
-      res.status(200).json(other);
+      return res.status(200).json(other);
     } else res.status(200).json('user not exists');
   } catch (err) {
     return res.status(500).json(err);
