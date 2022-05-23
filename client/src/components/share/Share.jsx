@@ -15,25 +15,28 @@ export default function Share() {
           />
         </div>
         <hr className='shareHr' />
+
         <div className='shareButtons'>
           <div className='shareOptions'>
-            <Image className='shareIcon' htmlColor='blue' />
-            <span className='shareOptionText'>Picture</span>
+            <div className='shareOption'>
+              <Image className='shareIcon' htmlColor='blue' />
+              <span className='shareOptionText'>Picture</span>
+            </div>
+            <div className='shareOption'>
+              <Gif className='shareIcon' htmlColor='hotpink' />
+              <span className='shareOptionText'>GIF</span>
+            </div>
+            <div className='shareOption'>
+              <Face className='shareIcon' htmlColor='green' />
+              <span className='shareOptionText'>Feeling</span>
+            </div>
+            <div className='shareOption'>
+              <Analytics className='shareIcon' htmlColor='red' />
+              <span className='shareOptionText'>Vote</span>
+            </div>
           </div>
-          <div className='shareOptions'>
-            <Gif className='shareIcon' htmlColor='hotpink' />
-            <span className='shareOptionText'>GIF</span>
-          </div>
-          <div className='shareOptions'>
-            <Face className='shareIcon' htmlColor='green' />
-            <span className='shareOptionText'>Feeling</span>
-          </div>
-          <div className='shareOptions'>
-            <Analytics className='shareIcon' htmlColor='red' />
-            <span className='shareOptionText'>Vote</span>
-          </div>
+          <button className='shareButton'>Submit</button>
         </div>
-        <button className='shareButton'>Submit</button>
       </div>
     </div>
   );

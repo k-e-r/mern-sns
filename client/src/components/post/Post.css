@@ -1,7 +1,7 @@
 .post {
   width: 100%;
-  box-shadow: 3px 7px 13px -10px #404755;
-  border-radius: 10px;
+  box-shadow: 5px 5px 13px -10px #586070;
+  border-radius: 2px;
   margin: 30px 0;
 }
 
@@ -28,17 +28,21 @@
 }
 
 .postUsername {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 550;
   margin: 0 10px;
 }
 
 .postDate {
-  font-size: 12px;
+  font-size: 11px;
 }
 
 .postCenter {
   margin: 20px 0;
+}
+
+.postText {
+  font-size: 13px;
 }
 
 .postImg {
@@ -60,19 +64,19 @@
 }
 
 .likeIcon {
-  width: 24px;
-  height: 24px;
+  width: 16px;
+  height: 16px;
   margin-right: 5px;
   cursor: pointer;
 }
 
 .postLikeCounter {
-  font-size: 15px;
+  font-size: 12px;
 }
 
 .postCommentText {
   cursor: pointer;
   border-bottom: 1px solid gray;
-  font-size: 15px;
+  font-size: 12px;
   margin-right: 3px;
 }
