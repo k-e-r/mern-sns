@@ -1,11 +1,14 @@
-import { Search } from '@mui/icons-material';
-import { MessageRounded } from '@mui/icons-material';
-import { Person } from '@mui/icons-material';
-import { Settings } from '@mui/icons-material';
-import { Bookmark } from '@mui/icons-material';
-import { Notifications } from '@mui/icons-material';
-import { Home } from '@mui/icons-material';
+import {
+  Bookmark,
+  Home,
+  MessageRounded,
+  Notifications,
+  Person,
+  Search,
+  Settings,
+} from '@mui/icons-material';
 import React from 'react';
+import './Sidebar.css';
 
 export default function Sidebar() {
   return (
