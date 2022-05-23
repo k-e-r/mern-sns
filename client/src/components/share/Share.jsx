@@ -17,19 +17,19 @@ export default function Share() {
         <hr className='shareHr' />
         <div className='shareButtons'>
           <div className='shareOptions'>
-            <Image className='shareIcon' />
+            <Image className='shareIcon' htmlColor='blue' />
             <span className='shareOptionText'>Picture</span>
           </div>
           <div className='shareOptions'>
-            <Gif className='shareIcon' />
+            <Gif className='shareIcon' htmlColor='hotpink' />
             <span className='shareOptionText'>GIF</span>
           </div>
           <div className='shareOptions'>
-            <Face className='shareIcon' />
+            <Face className='shareIcon' htmlColor='green' />
             <span className='shareOptionText'>Feeling</span>
           </div>
           <div className='shareOptions'>
-            <Analytics className='shareIcon' />
+            <Analytics className='shareIcon' htmlColor='red' />
             <span className='shareOptionText'>Vote</span>
           </div>
         </div>
