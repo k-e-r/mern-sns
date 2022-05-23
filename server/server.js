@@ -4,7 +4,7 @@ const app = express();
 const userRoute = require('./routes/users');
 const authRoute = require('./routes/auth');
 const postRoute = require('./routes/posts');
-const PORT = 3000;
+const PORT = 5000;
 const mongoose = require('mongoose');
 const connectionURL = process.env.MONGO_URL;
 
