@@ -54,6 +54,22 @@ export default function Sidebar() {
             />
             <span className='sidebarFriendName'>Shin</span>
           </li>
+          <li className='sidebarFriend'>
+            <img
+              src='/assets/person/3.jpeg'
+              alt=''
+              className='sidebarFriendImg'
+            />
+            <span className='sidebarFriendName'>Tanaka</span>
+          </li>
+          <li className='sidebarFriend'>
+            <img
+              src='/assets/person/4.jpeg'
+              alt=''
+              className='sidebarFriendImg'
+            />
+            <span className='sidebarFriendName'>Satoh</span>
+          </li>
         </ul>
       </div>
     </div>
