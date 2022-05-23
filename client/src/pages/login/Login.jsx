@@ -1,13 +1,25 @@
-import React, { useRef } from 'react';
+import React, { useContext, useRef } from 'react';
+import { loginCall } from '../../actionCalls';
+import { AuthContext } from '../../state/AuthContext';
 import './Login.css';
 
 export default function Login() {
   const email = useRef();
   const password = useRef();
+  const { user, isFetching, error, dispatch } = useContext(AuthContext);
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    loginCall(
+      {
+        email: email.current.value,
+        password: password.current.value,
+      },
+      dispatch
+    );
   };
+
+  console.log(user);
 
   return (
     <div className='login'>
@@ -35,7 +47,7 @@ export default function Login() {
               ref={password}
             />
             <button className='loginButton'>Login</button>
-            <span className='loginForgot'>Do you forget your password?</span>
+            <span className='loginForgot'>Did you forget your password?</span>
             <button className='loginRegisterButton'>create account</button>
           </form>
         </div>
