@@ -1,7 +1,14 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import './Login.css';
 
 export default function Login() {
+  const email = useRef();
+  const password = useRef();
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <div className='login'>
       <div className='loginWrapper'>
@@ -10,14 +17,27 @@ export default function Login() {
           <span className='loginDesc'>making SNS</span>
         </div>
         <div className='loginRight'>
-          <div className='loginBox'>
+          <form className='loginBox' onSubmit={(e) => handleSubmit(e)}>
             <p className='loginMsg'>Login here</p>
-            <input type='text' className='loginInput' placeholder='email' />
-            <input type='text' className='loginInput' placeholder='password' />
+            <input
+              type='email'
+              className='loginInput'
+              placeholder='email'
+              required
+              ref={email}
+            />
+            <input
+              type='password'
+              className='loginInput'
+              placeholder='password'
+              minLength='6'
+              required
+              ref={password}
+            />
             <button className='loginButton'>Login</button>
             <span className='loginForgot'>Do you forget your password?</span>
             <button className='loginRegisterButton'>create account</button>
-          </div>
+          </form>
         </div>
       </div>
     </div>
