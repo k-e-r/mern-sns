@@ -7,12 +7,18 @@ export default function post() {
     <div className='post'>
       <div className='postWrapper'>
         <div className='postTop'>
-          <img src='/assets/person/1.jpeg' alt='' className='postProfileImg' />
-          <span className='postUsername'>Shin</span>
-          <span className='postDate'>5 min ago</span>
-        </div>
-        <div className='postRight'>
-          <MoreVert />
+          <div className='postTopLeft'>
+            <img
+              src='/assets/person/1.jpeg'
+              alt=''
+              className='postProfileImg'
+            />
+            <span className='postUsername'>Shin</span>
+            <span className='postDate'>5 min ago</span>
+          </div>
+          <div className='postTopRight'>
+            <MoreVert />
+          </div>
         </div>
         <div className='postCenter'>
           <span className='postText'>making SNS</span>
