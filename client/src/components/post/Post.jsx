@@ -4,9 +4,10 @@ import React, { useEffect, useState } from 'react';
 import './Post.css';
 // import { Users } from '../../dummyData';
 import axios from 'axios';
+import { format } from 'timeago.js';
 
 export default function post({ post }) {
-  const [like, setLike] = useState(post.like);
+  const [like, setLike] = useState(post.likes.length);
   const [isLiked, setIsLiked] = useState(false);
   const [user, setUser] = useState({});
 
@@ -35,7 +36,7 @@ export default function post({ post }) {
               className='postProfileImg'
             />
             <span className='postUsername'>{user.username}</span>
-            <span className='postDate'>{post.date}</span>
+            <span className='postDate'>{format(post.createdAt)}</span>
           </div>
           <div className='postTopRight'>
             <MoreVert />
@@ -43,7 +44,7 @@ export default function post({ post }) {
         </div>
         <div className='postCenter'>
           <span className='postText'>{post.desc}</span>
-          <img src={post.photo} alt='' className='postImg' />
+          <img src={post.img} alt='' className='postImg' />
         </div>
         <div className='postBottom'>
           <div className='postBottomLeft'>
