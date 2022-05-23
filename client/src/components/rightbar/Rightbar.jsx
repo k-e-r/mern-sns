@@ -42,7 +42,52 @@ export default function Rightbar({ profile }) {
   };
 
   const ProfileRightbar = () => {
-    return <>profile's rightbar</>;
+    return (
+      <>
+        <h4 className='rightbarTitle'>User Information</h4>
+        <div className='rightbarInfo'>
+          <div className='rightbarInfoItem'>
+            <span className='rightbarInfoKey'>from:</span>
+            <span className='rightbarInfoKey'>Fukuoka</span>
+          </div>
+          <h4 className='rightbarTitle'>Your friends</h4>
+          <div className='rightbarFollowings'>
+            <div className='rightbarFollowing'>
+              <img
+                src='/assets/person/1.jpeg'
+                alt=''
+                className='rightbarFollowingImg'
+              />
+              <span className='rightbarFollowingName'>Shin</span>
+            </div>
+            <div className='rightbarFollowing'>
+              <img
+                src='/assets/person/2.jpeg'
+                alt=''
+                className='rightbarFollowingImg'
+              />
+              <span className='rightbarFollowingName'>Tanaka</span>
+            </div>
+            <div className='rightbarFollowing'>
+              <img
+                src='/assets/person/3.jpeg'
+                alt=''
+                className='rightbarFollowingImg'
+              />
+              <span className='rightbarFollowingName'>Yamaki</span>
+            </div>
+            <div className='rightbarFollowing'>
+              <img
+                src='/assets/person/4.jpeg'
+                alt=''
+                className='rightbarFollowingImg'
+              />
+              <span className='rightbarFollowingName'>John</span>
+            </div>
+          </div>
+        </div>
+      </>
+    );
   };
 
   return (
