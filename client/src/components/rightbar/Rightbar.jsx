@@ -35,6 +35,25 @@ export default function Rightbar() {
             <span className='rightbarUsername'>Tanaka</span>
           </li>
         </ul>
+        <p className='promotionTitle'>promotion</p>
+        <img
+          src='/assets/promotion/promotion1.jpeg'
+          alt=''
+          className='rightbarPromotionImg'
+        />
+        <p className='promotionName'>shopping</p>
+        <img
+          src='/assets/promotion/promotion2.jpeg'
+          alt=''
+          className='rightbarPromotionImg'
+        />
+        <p className='promotionName'>car shop</p>
+        <img
+          src='/assets/promotion/promotion3.jpeg'
+          alt=''
+          className='rightbarPromotionImg'
+        />
+        <p className='promotionName'>company</p>
       </div>
     </div>
   );
